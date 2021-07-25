@@ -6,9 +6,12 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[nottoc, notlot, notlof]{tocbibind}
-\usepackage{csquotes}
+\usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[style=ieee,sorting=ynt]{biblatex}
+\addbibresource{ref.bib}
 
 %End Package_List ----------
 \titleformat*{\section}{\Huge\bfseries}
@@ -20,6 +23,8 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
 \fancyhead[L]{\slshape{\textbf{Hindi Tweets Sentiment Analysis Using Transfer Learning}}}
 \fancyhead[R]{\slshape{\textbf{Anubhav Mehra}}}
 \fancyfoot[C]{\thepage}
@@ -49,12 +54,53 @@
 			
 	\end{center}
 \end{titlepage}
-\begin{abstract}
-Transfer Learning is very useful tool when we want
-\end{abstract}
+\begin{center}
+\textbf{Acknowledgement}
+\end{center}
+It is a genuine pleasure to express my deep sense of gratitude to my mentor and my Ph.D. supervisor Dr. Manoj Singh Bisht. His advice and approach have helped me to a very great extent to accomplish this task. 
+
+I would also like to extend my grati[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]tude to the Department of Computer Science, S.S.J University, Almora and all its facult members who have been of great help during the course of this project.
+
+Finally I would like to thanks my head Dr. Ashish Mehta, Department of Computer Science, DSB Campus Nanital for his immense help and providing me with time to complete my dissertation work.
+\thispagestyle{empty}
+\clearpage
+
 \tableofcontents
 \thispagestyle{empty}
 \clearpage
 \setcounter{page}{1}
+\section{Introduction}
+\begin{abstract}
+\noindent Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionaly, to train a model for sentiment analysis require very dense nerual networks to train on very huge datasets. But, here we have used a techinque called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can levarage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Reprsentations from Transformers)}. BERT is a pretained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pretained on the tope 104 languages including Hindi. We then levarage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
+\end{abstract}
+\begin{multicols}{2}
+Transfer Learning is a Machine Learning method where a model that is trained for a certain task is utilized as the starting point for solving some other task i.e., to train a second model from the knowledge learned from the first model as well as the dataset. It is a very popular approach in natural language processing domain to solve problems such as getting the context of the text.
 
+The inspiration for transfer learning comes from us - humans, ourselves - where in, we have an inherent ability to not learn everything from scratch. We transfer and leverage our knowledge from what we have learnt in the past for tackling a wide variety of tasks.\cite{sarkar_deep_2018}
+
+One such problem is \textbf{Sentiment Analysis}. Sentiment Analysis or emotion AI, is the process in natural language processing  of subjective emotional analysis of the text. Primarily sentiment analysis finds if the emotional tone of a piece of writing is \textbf{\textit{positive, neutral or negative}}. \textbf{Table \ref{table: category}} lists some examples of what a sentiment analysis categorization may look like.
+\begin{table}[H]
+\caption{ Sentiment Analysis Categorization.\label{table: category}}
+
+\begin{tabularx}{\columnwidth}{| X | X |}
+\hline
+Text & Category \\ [0.5ex]
+\hline
+\hline
+That restaurant has a great food & Positive \\ [0.5ex]
+\hline
+He is my brother's colleague & Neutral \\ [0.5ex]
+\hline
+Bollywood movies are not entertaining & Negative \\ [0.5ex]
+\hline
+\end{tabularx}
+\end{table}
+
+As, we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem.
+\end{multicols}
+\printbibliography
 \end{document}
