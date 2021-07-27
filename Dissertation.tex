@@ -53,7 +53,7 @@
 			\vfill
 			\Large{\textbf{DEPARTMENT OF COMPUTER SCIENCE \\ S.S.J. UNIVERSITY ALMORA \\ ALMORA - 263601(INDIA) \\ JULY, 2021}}
 			
-			
+			\normalsize
 			
 	\end{center}
 \end{titlepage}
@@ -78,14 +78,18 @@ Anubhav Mehra \\
 \end{flushright}
 \thispagestyle{empty}
 \clearpage
+\begin{center}
+\textbf{\underline{ABSTRACT}} \\ [0.5ex]
+\end{center}
+ Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
+
+\thispagestyle{empty}
+\clearpage
 \tableofcontents
 \thispagestyle{empty}
 \clearpage
 \setcounter{page}{1}
 \section{Introduction}
-\begin{abstract}
-\noindent Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
-\end{abstract}
 
 \subsection{Transfer Learning}
 Transfer Learning is a Machine Learning method where a model that is trained for a certain task is utilized as the starting point for solving some other task i.e., to train a second model from the knowledge learned from the first model as well as the dataset. It is a very popular approach in natural language processing domain to solve problems such as getting the context of the text.
