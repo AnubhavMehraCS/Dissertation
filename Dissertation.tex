@@ -11,7 +11,7 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{multicol}
-\usepackage[backend=bibtex,style=ieee,sorting=ynt]{biblatex}
+\usepackage[backend=bibtex,style=ieee,sorting=none]{biblatex}
 \addbibresource{ref.bib}
 
 %End Package_List ----------
@@ -79,7 +79,21 @@ Transfer Learning is a Machine Learning method where a model that is trained for
 
 The inspiration for transfer learning comes from us - humans, ourselves - where in, we have an inherent ability to not learn everything from scratch. We transfer and leverage our knowledge from what we have learn in the past for tackling a wide variety of tasks.\cite{sarkar_deep_2018}
 
-One such problem is \textbf{Sentiment Analysis}. Sentiment Analysis or emotion AI, is the process in natural language processing  of subjective emotional analysis of the text. Primarily sentiment analysis finds if the emotional tone of a piece of writing is \textbf{\textit{positive, neutral or negative}}. \textbf{Table \ref{table: category}} lists some examples of what a sentiment analysis categorization may look like.
+\large \textbf{Deciding when to use Transfer Learning} \\ [0.5ex]
+\normalsize
+As with any technique at our disposal we must have a very clear reason on using transfer learning. First and foremost, we must realize that we can't use transfer learning in every situation. This is because for transfer learning to work we must have a model trained on a similar task. As with the problem concerned in our dissertation here, we have  a language model available which is trained in recognizing linguistic structure of  various languages. Now, we can leverage the power of this model to train a new model for our context analysis problem. If this is the case, you will realize that transfer learning is a very decent technique to use for acquiring better results and that too in very short amount of time than traditional methods. Now, with this out of the way you may want to use transfer learning if you have following conditions:
+\begin{itemize}
+\item{You have a smaller dataset}
+\item{You are constrained on time}
+\end{itemize}
+
+\large \textbf{Applications of Transfer Learning} \\ [0.5ex]
+\normalsize
+There are various applications of Transfer Learning in variety of domains. In \textbf{Image Recognition}, transfer learning can be used to perform various imaging tasks. For e.g.,  a model trained to identify face can be used for facial recognition. Transfer Learning can also be used in \textbf{Speech Recognition} tasks.  For e.g., a model trained in a particular language for speech recognition can be used to train a model for speech authentication. But our key domain of interest where we are most interested in using this technique is \textbf{Natural Language Processing}. Transfer learning can be used to solve various tasks in  NLP. For e.g., a model trained in recognizing the linguistic structure of a language can be used to train a model to predict next word based on the series of words it gets in the previous sentences.
+
+\large\textbf{Sentiment Analysis} \\ [0.5 ex]
+\normalsize
+One such task in NLP is \textbf{Sentiment Analysis}. Sentiment Analysis or emotion AI, is the process in natural language processing  of subjective emotional analysis of the text. Primarily sentiment analysis finds if the emotional tone of a piece of writing is \textbf{\textit{positive, neutral or negative}}. \textbf{Table \ref{table: category}} lists some examples of what a sentiment analysis categorization may look like.
 \begin{table}[H]
 \caption{ Sentiment Analysis Categorization.\label{table: category}}
 
@@ -97,8 +111,8 @@ Bollywood movies are not entertaining & Negative \\ [0.5ex]
 \end{tabularx}
 \end{table}
 
-As, we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem.
-
+As we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem. It is a challenging problem because the way humans communicate using natural languages is extremely varied depending  upon \textit{subjectivity}, \textit{use of irony}, and the \textit{context} of the phrase. Not all verbs, nouns and pronouns can be treated equally when analyzing the emotional tone of the text. The tone of our phrases depends on how we are using them, when we are using them and for what we are using them. For e.g., the phrase \textit{absolutely everything}, can be an answer to a question like \textit{What are you so happy about?} or can equally be an answer to a completely opposite  question \textit{What are you so sad about?}. Thus, the emotional tone of the phrase can have completely separate meaning depending upon the various parameters. In the example above, the context of the phrase can alter the emotional meaning of the phrase completely.
+\clearpage
 \printbibliography
 \end{sloppypar}
 \end{document}
