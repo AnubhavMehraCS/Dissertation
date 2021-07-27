@@ -55,16 +55,6 @@
 	\end{center}
 \end{titlepage}
 \begin{sloppypar}
-\begin{center}
-\textbf{Acknowledgment}
-\end{center}
-It is a genuine pleasure to express my deep sense of gratitude to my mentor and my Ph.D. supervisor Dr. Manoj Singh Bisht. His advice and approach have helped me to a very great extent to accomplish this task. 
-
-I would also like to extend my gratitude to the Department of Computer Science, S.S.J University, Almora and all its faculty members who have been of great help during the course of this project.
-
-Finally I would like to thanks my head Dr. Ashish Mehta, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
-\thispagestyle{empty}
-\clearpage
 
 \tableofcontents
 \thispagestyle{empty}
@@ -75,6 +65,8 @@ Finally I would like to thanks my head Dr. Ashish Mehta, Department of Computer 
 \noindent Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
 \end{abstract}
 
+\large \textbf{Transfer Learning} \\ [0.5ex]
+\normalsize
 Transfer Learning is a Machine Learning method where a model that is trained for a certain task is utilized as the starting point for solving some other task i.e., to train a second model from the knowledge learned from the first model as well as the dataset. It is a very popular approach in natural language processing domain to solve problems such as getting the context of the text.
 
 The inspiration for transfer learning comes from us - humans, ourselves - where in, we have an inherent ability to not learn everything from scratch. We transfer and leverage our knowledge from what we have learn in the past for tackling a wide variety of tasks.\cite{sarkar_deep_2018}
@@ -111,8 +103,27 @@ Bollywood movies are not entertaining & Negative \\ [0.5ex]
 \end{tabularx}
 \end{table}
 
-As we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem. It is a challenging problem because the way humans communicate using natural languages is extremely varied depending  upon \textit{subjectivity}, \textit{use of irony}, and the \textit{context} of the phrase. Not all verbs, nouns and pronouns can be treated equally when analyzing the emotional tone of the text. The tone of our phrases depends on how we are using them, when we are using them and for what we are using them. For e.g., the phrase \textit{absolutely everything}, can be an answer to a question like \textit{What are you so happy about?} or can equally be an answer to a completely opposite  question \textit{What are you so sad about?}. Thus, the emotional tone of the phrase can have completely separate meaning depending upon the various parameters. In the example above, the context of the phrase can alter the emotional meaning of the phrase completely.
+As we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem. It is a challenging problem because the way humans communicate using natural languages is extremely varied depending  upon \textit{subjectivity}, \textit{use of irony}, and the \textit{context} of the phrase. Not all verbs, nouns and pronouns can be treated equally when analyzing the emotional tone of the text. The tone of our phrases depends on how we are using them, when we are using them and for what we are using them. For e.g., the phrase \textit{absolutely everything}, can be an answer to a question like \textit{What are you so happy about?} or can equally be an answer to a completely opposite  question \textit{What are you so sad about?}. Thus, the emotional tone of the phrase can have completely separate meaning depending upon the various parameters. In the example above, the context of the phrase can alter the emotional meaning of the phrase completely. We'll see more about the challenges faced in Sentiment Analysis, in the following chapters.
+
+\large \textbf{Applications of Sentiment Analysis} \\[0.5ex]
+\normalsize
+Here are some applications of sentiment analysis.
 \clearpage
 \printbibliography
+\clearpage
+\begin{center}
+\textbf{Acknowledgment}
+\end{center}
+It is a genuine pleasure to express my deep sense of gratitude to my mentor and my Ph.D. supervisor Dr. Manoj Singh Bisht. His advice and approach have helped me to a very great extent to accomplish this task. 
+
+I would also like to extend my gratitude to the Department of Computer Science, S.S.J University, Almora and all its faculty members who have been of great help during the course of this project.
+
+Finally I would like to thanks my head Dr. Ashish Mehta, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
+
+\begin{flushright}
+Date : \line(1,0){70} \\ [1ex]
+Sign : \line(1,0){70}
+\end{flushright}
+\thispagestyle{empty}
 \end{sloppypar}
 \end{document}
