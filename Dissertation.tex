@@ -83,7 +83,7 @@ Anubhav Mehra \\
 \end{center}
  Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
 
-\textbf{Keywords:} Sentiment Analysis, Emotion AI,  Natural Language Processing, Transfer Learning, BERT, Multilingual Natural Language Processing
+\textbf{Keywords:} Sentiment Analysis, Emotion AI,  Natural Language Processing, Transfer Learning, BERT, Multilingual Natural Language Processing, Hindi Sentiment Analysis.
 \thispagestyle{empty}
 \clearpage
 \tableofcontents
@@ -162,7 +162,7 @@ Listed below are some applications of Sentiment Analysis:
 
 \subsection{Purpose}
 
-The purpose of this project is to showcase the use of Transfer Learning in developing a model for Sentiment Analysis of Social Media Posts( tweets in this case) in Hindi Language. Thus, calculating the accuracy of the model trained on a relatively small dataset compared to those that would have been required if we would've followed a Traditional ML route. Hence, contributing in the field of Machine Learning and Data Science for any future project work in technology development.
+The purpose of this project is to showcase the use of Transfer Learning in developing a model for Sentiment Analysis of Social Media Posts( tweets in this case) posted in Hindi Language. Thus, calculating the accuracy of the model trained on a relatively small dataset and quick training time compared to those that would have been required if we would've followed a Traditional ML route. Hence, contributing in the field of Machine Learning and Data Science for any future project work in technology development.
 
 \subsection{Dissertation Structure}
 \textbf{Chapter 2:} This chapter discusses the literature review of this project. It discusses the concepts of this project, related an similar works done.
@@ -196,7 +196,15 @@ Humans are generally very good at transfer learning. We use our knowledge at one
 \end{center}
 \end{figure}
 
-In Transfer Learning as compared to Traditional 
+In Transfer Learning as compared to Traditional Learning  where models are trained in complete  isolation, we use the knowledge gained by a model in solving a task of similar domain to train our desired model to solve some other task.
+
+\subsubsection{Definition of Transfer Learning}
+
+Following is the definition of Transfer Learning in terms of domain and tasks.
+
+A domain $D$ consists of: a feature space $X$ and a marginal probability distribution $P(X), where\ X = \{x1, ...., xn\} \in X$.  Give a specific domain, $D = \{X, P(X)\}$, a task consists of two components: a label space $Y$ and an objective function $f: X \rightarrow Y$. The function $f$ is used to predict the corresponding label $f(x)$ of a new instance $x$. This task, denoted by $T = \{Y, f(x)\}$, is learned from the training data consists of pairs $\{x_i, y_i\}$, where $x_i \in X$ and $y_i \in Y$. %cite Lin and Jung
+
+Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and learning task $T_T$, where $D_S \ne D_T$, or $T_S \ne T_T$, transfer learning aims to help improve the learning of the target predictive function $f_T( \bullet ) \ in \ D_T$ using the knowledge $D_S$ and $D_T$. %cite Lin and Jung
 \clearpage
 \printbibliography
 \clearpage
