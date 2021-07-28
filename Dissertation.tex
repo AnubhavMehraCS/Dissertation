@@ -127,7 +127,7 @@ Transfer Learning is a Machine Learning method where a model that is trained for
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{tl.png}
-\caption{Differentiation between Traditional and Transfer Learning Methodology. \cite{noauthor_guide_2019} \label{tl}}
+\caption{Differentiation between Traditional and Transfer Learning Methodology.\cite{noauthor_guide_2019} \label{tl}}
 \end{center}
 \end{figure}
 
@@ -185,7 +185,7 @@ Listed below are some applications of Sentiment Analysis:
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{cat.png}
-\caption{Application of Sentiment Analysis. \cite{smetanin_applications_2020} \label{cat}}
+\caption{Application of Sentiment Analysis.\cite{smetanin_applications_2020} \label{cat}}
 \end{center}
 \end{figure}
 
@@ -212,7 +212,7 @@ This section details various concepts behind this project, their workings and al
 \subsection{Concept of Transfer Learning}
 
 \subsubsection{General Idea}
-While, we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions. \cite{noauthor_transfer_2017}
+While, we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions.\cite{noauthor_transfer_2017}
 
 So to make a generalizing model the dataset required that would enable the model to learn the working in the real world would be astoundingly huge. Collecting such dataset may be difficult, expensive and can also be downright impossible in many cases. So for a solution we turns our head towards transfer learning.
 
@@ -231,17 +231,17 @@ In Transfer Learning as compared to Traditional Learning  where models are train
 
 Following is the definition of Transfer Learning in terms of domain and tasks.
 
-A domain $D$ consists of: a feature space $X$ and a marginal probability distribution $P(X), where\ X = \{x1, ...., xn\} \in X$.  Give a specific domain, $D = \{X, P(X)\}$, a task consists of two components: a label space $Y$ and an objective function $f: X \rightarrow Y$. The function $f$ is used to predict the corresponding label $f(x)$ of a new instance $x$. This task, denoted by $T = \{Y, f(x)\}$, is learned from the training data consists of pairs $\{x_i, y_i\}$, where $x_i \in X$ and $y_i \in Y$. \cite{lin_improving_2017}
+A domain $D$ consists of: a feature space $X$ and a marginal probability distribution $P(X), where\ X = \{x1, ...., xn\} \in X$.  Give a specific domain, $D = \{X, P(X)\}$, a task consists of two components: a label space $Y$ and an objective function $f: X \rightarrow Y$. The function $f$ is used to predict the corresponding label $f(x)$ of a new instance $x$. This task, denoted by $T = \{Y, f(x)\}$, is learned from the training data consists of pairs $\{x_i, y_i\}$, where $x_i \in X$ and $y_i \in Y$.\cite{lin_improving_2017}
 
-Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and learning task $T_T$, where $D_S \ne D_T$, or $T_S \ne T_T$, transfer learning aims to help improve the learning of the target predictive function $f_T( \bullet ) \ in \ D_T$ using the knowledge $D_S$ and $D_T$. \cite{lin_improving_2017}
+Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and learning task $T_T$, where $D_S \ne D_T$, or $T_S \ne T_T$, transfer learning aims to help improve the learning of the target predictive function $f_T( \bullet ) \ in \ D_T$ using the knowledge $D_S$ and $D_T$.\cite{lin_improving_2017}
 
 \subsection{Sentiment Analysis using Transfer Learning}
 
-The current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labeling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning. \cite{liu_survey_2019}
+The current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labeling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning.\cite{liu_survey_2019}
 
 \subsubsection{Language Model Pre-Training}
 
-The intuition behind pre-trained language models is to create a black box which understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of annotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine tune and create the final model capable of performing the aforementioned task. \cite{ganesh_pre-trained_2019}
+The intuition behind pre-trained language models is to create a black box which understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of annotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine tune and create the final model capable of performing the aforementioned task.\cite{ganesh_pre-trained_2019}
 
 \begin{figure}[H]
 \begin{center}
@@ -250,11 +250,11 @@ The intuition behind pre-trained language models is to create a black box which 
 \end{center}
 \end{figure}
 
-Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed. \cite{howard_universal_2018}
+Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed.\cite{howard_universal_2018}
 
 \subsubsection{BERT Model}
 
-\textbf{BERT}, which stands for \textbf{B}idirectional  \textbf{E}ncoder  \textbf{R}epresentations from  \textbf{T}ransformers is designed to pre-train deep bidirectional representations from unlabeled text by jointly condition on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of NLP tasks. \cite{devlin_bert_2019}
+\textbf{BERT}, which stands for \textbf{B}idirectional  \textbf{E}ncoder  \textbf{R}epresentations from  \textbf{T}ransformers is designed to pre-train deep bidirectional representations from unlabeled text by jointly condition on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of NLP tasks.\cite{devlin_bert_2019}
 
 BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing GLUE\cite{wang_glue_2018}
  score to $80.5 \%$ , MultiNLI\cite{williams_broad-coverage_2018}
