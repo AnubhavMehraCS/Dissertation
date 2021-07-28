@@ -220,7 +220,7 @@ The intuition behind pre-trained language models is to create a black box which 
 \end{center}
 \end{figure}
 
-Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULFfit} fine-tuning approach of Language-Model pre-training has showed. %cite Howard and Ruder.
+Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed. %cite Howard and Ruder.
 
 \subsubsection{BERT Model}
 
@@ -232,7 +232,12 @@ accuracy to $86.7\%$, SQuAD v1.1 %cite SQUAD
 question answering test F1 to 93.2  and SQuAD v2.0 %cite SQUAD
 Test F1 to 83.1. %cite BERT
 
+\subsection{Related Work}
 
+IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others. %cite hindi sentiment analysis stratergy
+
+In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors indtroduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses. %cite Bhaav
+My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset I decided to use the approach of BERT Model.
 \clearpage
 \printbibliography
 \clearpage
