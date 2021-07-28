@@ -5,6 +5,7 @@
 \usepackage[a4paper,left=30mm,right=30mm,top=15mm,bottom=22mm]{geometry}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{amsmath, amsfonts, amssymb}
 \usepackage{mathptmx}
 \usepackage[nottoc, notlot, notlof]{tocbibind}
 \usepackage{tabularx}
@@ -238,6 +239,64 @@ IIT Bombay did some research on developing strategies  for Sentiment Analysis in
 
 In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors indtroduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses. %cite Bhaav
 My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset I decided to use the approach of BERT Model.
+\clearpage
+\section{Methodology and Implementation}
+
+This section details the methodology and implementation details of the project. In this section the following details are described -  features of the dataset, preprocessing, and overall preparation and implementation methods used.
+
+\subsection{Dataset}
+
+After the initial failure to get the access to the BHAAV dataset %cite BHAAV
+ , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, I found a github repository %cite github repo.
+ which had the dataset appropriate for sentiment analysis. The dataset here contains various tweets in Hindi along with corresponding label describing the emotional tone of the tweet. The categories of the label are \textit{negative}, \textit{neutral}, \textit{positive}. Figure \ref{dataset} shows some record in the dataset.
+ 
+ \begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.8]{dataset.png}
+ \caption{ Subset of the dataset used in training the model.\label{dataset}}
+ \end{center}
+ \end{figure}
+ 
+ The dataset contains n number of record. This dataset is then further divided into training, test and validation set. The total records in training set are n1 and the validation and test sets contains n2 and n3 records respectively. As, we can see n1 is comparatively a small number of records required to give a good accuracy on task like Sentiment Analysis. This is where transfer learning comes into play.
+ 
+ \subsection{Preprocessing}
+ 
+ There is not a lot of preprocessing done to the dataset. The first thing that is done is to encode the categorical data in label column as the model works on numerical values not text values. Label Encoding technique is used for this purpose. \textbf{Label Encoding} refers to converting the labels into numeric form so as to convert it into the machine-readable form. Machine learning algorithms can then decide in a better way on how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning. %cite gfg
+ We have three categories in our label data namely \textit{negative}, \textit{neutral}, and \textit{positive}. These will be converted to \textit{0} , \textit{1} and \textit{2} respectively.
+ 
+ Secondly, for input we need to tokenize input as most NLP model are trained on tokens. For this we need to first make all the inputs of number of words . We do this by finding a cutoff number of words. For this we draw a histogram plot of all the inputs based on the total number of words they have and choose number of words that would satisfy most of the inputs. Figure \ref{plot} show the histogram distribution of input based on the total no. of words present in the piece of writing. And as we can see 35, is a good place to put our  cutoff. So that's what we've done. 
+ 
+ \begin{figure}[H]
+ \begin{center}
+ \includegraphics[scale=0.65]{maxlen.png}
+ \caption{Histogram plot of the inputs based on the number of words\label{plot}}.
+ \end{center}
+ \end{figure}
+ Then we have used to BERTTokenizerFast , a tokenizer pre-trained on multilingual dataset corpus. Tokenizer prepares our input in the following ways.
+ \begin{itemize}
+ \item{Tokenizing (splitting strings in sub-word token strings), converting tokens strings to ids and back, and encoding/decoding (i.e., tokenizing and converting to integers).} %cite BERT TOKENIZER
+
+\item{Adding new tokens to the vocabulary in a way that is independent of the underlying structure (BPE, SentencePiece…).} %cite BERT TOKENIZER
+
+\item{Managing special tokens (like mask, beginning-of-sentence, etc.): adding them, assigning them to attributes in the tokenizer for easy access and making sure they are not split during tokenization.} %cite BERT TOKENIZER
+ \end{itemize}
+ 
+ After the tokenization process is done we've feed these tokens as pytorch % cite pytorch
+  tensors to be later transformed into pytorch DataClasses, which will be then used for training and validating in batches of fixed size. We have selected the batch size of 32.
+  
+  \subsection{Model}
+  
+  Our model has the following topology.
+  \begin{itemize}
+  \item{First our model has the BERT pre-trained multilingual model. To which the preprocessed input is passed to.}
+  
+  \item{Then the output of the BERT model is fed to the first layer of our model which contains 768 input, and 512 output Nodes. We have used the \textbf{Re}ctified \textbf{L}inear \textbf{U}nit activation function also called ReLU function at this layer. It is defined as $R(z) = max(0,z)$. It is usually a good first choice for an activation function based on some empirical evidences.}
+  
+  \item{Then we have used a dropout layer to which the output from first layer is passed to. This layer prevents from the problem of over fitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. } %cite droupout layer article
+  
+  \item{The output from the dropout layer is passed to our output layer. The output layer consists of 512 input nodes (same as the output of first layer) and 3 output nodes. As we have three categories to classify our data, therefore we've used 3 output nodes. The activation function used in this layer is the softmax function. The standard softmax function: $ \sigma : \mathbb{R}^K \rightarrow [0,1]^K $ is defined as $\sigma(z)_i = \frac{e^{z_i}}{\sum_{j = 1} ^{ K} e^{z_j}}\  for\  i = 1, ... , K\  and\  z = (z1, ..., z_K) \in \mathbb{R}^K$. The softmax function is used to normalize the output of the  network to a probability distribution over predicted output classes. } %cite softmax wikipedia
+  
+  \end{itemize}
 \clearpage
 \printbibliography
 \clearpage
