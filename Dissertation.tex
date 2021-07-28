@@ -294,9 +294,20 @@ After the initial failure to get the access to the BHAAV dataset %cite BHAAV
   
   \item{Then we have used a dropout layer to which the output from first layer is passed to. This layer prevents from the problem of over fitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. } %cite droupout layer article
   
-  \item{The output from the dropout layer is passed to our output layer. The output layer consists of 512 input nodes (same as the output of first layer) and 3 output nodes. As we have three categories to classify our data, therefore we've used 3 output nodes. The activation function used in this layer is the softmax function. The standard softmax function: $ \sigma : \mathbb{R}^K \rightarrow [0,1]^K $ is defined as $\sigma(z)_i = \frac{e^{z_i}}{\sum_{j = 1} ^{ K} e^{z_j}}\  for\  i = 1, ... , K\  and\  z = (z1, ..., z_K) \in \mathbb{R}^K$. The softmax function is used to normalize the output of the  network to a probability distribution over predicted output classes. } %cite softmax wikipedia
+  \item{The output from the dropout layer is passed to our output layer. The output layer consists of 512 input nodes (same as the output of first layer) and 3 output nodes. As we have three categories to classify our data, therefore we've used 3 output nodes. The activation function used in this layer is the softmax function. The standard softmax function: $ \sigma : \mathbb{R}^K \rightarrow [0,1]^K $ is defined as \large
+  $\sigma(z)_i = \frac{e^{z_i}}{\sum_{j = 1} ^{ K} e^{z_j}}\  for\  i = 1, ... , K\  and\  z = (z1, ..., z_K) \in \mathbb{R}^K$. 
+  \normalsize
+  The softmax function is used to normalize the output of the  network to a probability distribution over predicted output classes. } %cite softmax wikipedia
   
   \end{itemize}
+  
+  We use \textit{sklearn.utils.class\_weight.compute\_class\_weight} library function to estimate initial weights for our model. This function estimates weights using heuristic inspired by  Logistic Regression in Rare Events Data, King, Zen, 2001. %cite this paper
+  To calculate the loss we are using the cross entropy loss function. For a multiclass classification problem as we have, the cross entropy loss function can be defined as \large $- \sum_{c=1}^{M} y_{o,c} \ln(p_o,c)$.
+  \normalsize
+  
+  \subsection{Training and Validation Process}
+  
+  
 \clearpage
 \printbibliography
 \clearpage
