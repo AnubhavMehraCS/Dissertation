@@ -46,10 +46,10 @@
 		\vspace*{1cm}
 			\Large{\textbf{Hindi Tweets Sentiment Analysis Using Transfer Learning}}\\
 			\vspace*{3cm}
-			\large{\textbf{Pre Ph.D. Course Work \\ Dissertation}}\\
-			\large{\textbf{\textit{In}}}\\
-			\large{\textbf{Computer Science}}\\
-			\large{\textit{\textbf{by}}} \\
+			\large{\textbf{Pre Ph.D. Course Work \\ Dissertation}}\\ [1cm]
+			\large{\textbf{\textit{In}}}\\[1cm]
+			\large{\textbf{Computer Science}}\\ [1cm]
+			\large{\textit{\textbf{by}}} \\[1cm]
 			\large{\textbf{Anubhav Mehra}}\\
 			\vspace*{1cm}
 			\large{\textbf{Under the supervision of}}\\
@@ -116,6 +116,10 @@ Supervisor\\
 \thispagestyle{empty}
 \clearpage
 \tableofcontents
+\thispagestyle{empty}
+\clearpage
+\listoffigures
+\listoftables
 \thispagestyle{empty}
 \clearpage
 \setcounter{page}{1}
@@ -271,7 +275,7 @@ My first try for this project was to source this corpus for training our model, 
 \clearpage
 \section{Methodology and Implementation}
 
-This section details the methodology and implementation details of the project. In this section the following details are described -  features of the dataset, preprocessing, and overall preparation and implementation methods used.
+This section details the methodology and implementation details of the project. In this section the following details are described -  features of the dataset, preprocessing, and overall preparation, model topology, training and testing methodology.
 
 \subsection{Dataset}
 
@@ -335,13 +339,48 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
   \normalsize
   
   \subsection{Training and Validation Process}
+  Before training starts, we want to freeze the Bert Layers of our model so that the back propagation doesn't upgrade its weight. This is because we have a relatively small dataset and this can cause overfitting. So to avoid it, we freeze all the Bert Layers of our model. Then we decide on number of epochs we want to train our model for. For this project we have choose a relatively small epoch number which is \textbf{\textit{100}}. Now, our testing and validation process follow the given work flow.
+  \begin{itemize}
+  \item We step through the dataset in batches (batch size \textbf{32}).
+  \item We send the preprocessed inputs from the batches to our model and get our predictions.
+  \item We calculate the cross entropy loss from predicted and desired output.
+  \item Then we update the weights of our Model using back-propagation. 
+  \item Then we perform the validation of our model weights. The process of validation is similar to the process of training but in validation we calculate the average loss for each epoch and doesn't upgrade the weights of the model. Model weights are only upgraded when training.
+  \item We also save the weights of the best Model to a file in validation step. We decide which model is better using average loss that is calculated. We perform this check in every epoch.
+  \end{itemize}
   
+  This technique ensures that the model that is performing best in validation stage is the only one selected. This helps us removing overfitting even more as the model has no idea about the validation dataset during the training phase. Figure \ref{eval} showcase the basic idea behind training. Our training and validation loss decrease after each epoch(\textbf{this is not completely achievable all the time}.)
+  \begin{figure}[H]
+  \begin{center}
+  \includegraphics[scale=0.65]{eval.png}
+  \caption{Our programs output showcasing the best validation and test loss for each epoch.\label{eval}}
+  \end{center}
+  \end{figure}
   \subsection{Testing Process}
   
+  After the training is complete, the weights of the model with the best validation score (least average loss in validation phase) will be saved in a file. We load these weights to a new instance of our model, then we use this model to generate prediction of our test set.
+  
+  The predictions generated from our model is then used along with the labeled data of the test dataset to generate a classification report detailing the performance of our model. The classification report along with its analysis is given in the next chapter
+  \clearpage
   \section{Result and Conclusion}
-  
+  \clearpage
   \section{Further work and improvement}
+  The model and the process detailed in this dissertation can be improved with more work. 
+  \begin{itemize}
+  \item The dataset contains lots of data that is not required for our desired working, like user-names and hash-tags. We can further preprocess the dataset to remove these undesired components. This may increase the performance of our model.
   
+  \item Currently we have tested our model for only one value of max length, we can choose a better max length value through the process of cross validation. Choosing a different max length may increase the overall accuracy of our model.
+  
+  \item The topology of our model was restricted by the available VRAM of the machine. We would like to create either a more dense network or add more layers to the first and output layers our model. This may or may-not affect the overall performance of our model but as NLP models generally perform very well with mode dense networks. This change is likely to help.
+  
+  \item We could also train the model for more epochs. As 100 epochs may not be sufficient for the task at hand. We chose 100 epochs as it allowed us to train our model in decent time-frame.
+  
+  \item We could also do a cross analysis of this approach to a different approach of Sentiment Analysis using Transfer Learning.
+  \end{itemize}   
+  With the addition of aforementioned works we may have a much more robust and precise model at hand. We could also try to replicate this approach on either a bigger corpus and differently classed corpus like that available in BHAAV dataset. \cite{kumar_bhaav_2019}. These are some of the improvements and further works we suggest for our dissertation project.
+  
+  Next Chapter contains all the References used in the making of this project.
+
 \clearpage
 \printbibliography[heading=bibintoc]
 \clearpage
