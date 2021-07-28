@@ -10,6 +10,7 @@
 \usepackage[nottoc, notlot, notlof]{tocbibind}
 \usepackage{tabularx}
 \usepackage{titlesec}
+\usepackage{tikzpagenodes}
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage[backend=bibtex,style=ieee,sorting=none]{biblatex}
@@ -45,11 +46,14 @@
 		\vspace*{1cm}
 			\Large{\textbf{Hindi Tweets Sentiment Analysis Using Transfer Learning}}\\
 			\vspace*{3cm}
-			\large{\textbf{Pre Ph.D. DISSERTATION}}\\
-			\vspace*{3cm}
+			\large{\textbf{Pre Ph.D. Course Work \\ Dissertation}}\\
+			\large{\textbf{\textit{In}}}\\
+			\large{\textbf{Computer Science}}\\
 			\large{\textit{\textbf{by}}} \\
-			\vspace*{3cm}
 			\large{\textbf{Anubhav Mehra}}\\
+			\vspace*{1cm}
+			\large{\textbf{Under the supervision of}}\\
+			\large{\textbf{Dr. Manoj Kumar Bisht}}
 			\vfill
 			\Large{\textbf{DEPARTMENT OF COMPUTER SCIENCE \\ S.S.J. UNIVERSITY ALMORA \\ ALMORA - 263601(INDIA) \\ JULY, 2021}}
 			
@@ -61,11 +65,11 @@
 \begin{center}
 \textbf{\underline{ACKNOWLEDGMENT}}
 \end{center}
-It is a genuine pleasure to express my deep sense of gratitude to my mentor and my Ph.D. supervisor Dr. Manoj Singh Bisht. His advice and approach have helped me to a very great extent to accomplish this task. 
+It is a genuine pleasure to express my deep sense of gratitude to my mentor and my Ph.D. supervisor \textbf{Dr. Manoj Kumar Bisht}. His advice and approach have helped me to a very great extent to accomplish this task. 
 
-I would also like to extend my gratitude to the Department of Computer Science, S.S.J University, Almora and all its faculty members who have been of great help during the course of this project.
+I would also like to extend my gratitude to the Department of Computer Science, S.S.J University, Almora HOD ma'am \textbf{Dr. Parul Saxena} and all other faculty members who have been of great help during the course of this project.
 
-Finally I would like to thanks my head Dr. Ashish Mehta, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
+Finally I would like to thanks my head \textbf{Dr. Ashish Mehta}, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
 \thispagestyle{empty}
 \clearpage
 \begin{center}
@@ -78,10 +82,35 @@ Anubhav Mehra \\
 \end{flushright}
 \thispagestyle{empty}
 \clearpage
+
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=west,inner sep=15pt] at (current page text area.west|-0,-1.1cm) {\includegraphics[scale=0.2]{logo.png}};
+\end{tikzpicture}
+\begin{center}
+\Large{\textbf{Department of Computer Science}}\\
+\Large{\textbf{Soban Singh Jeena University, Almora,}}\\
+\Large{\textbf{Uttarakhand}}\\ [2cm]
+\Large{\underline{\textbf{CERTIFICATE}}}\\
+\end{center}
+I hereby certify that the work which is being presented in the dissertation entitled "\textbf{Hindi Tweets Sentiment Analysis using Transfer Learning}" submitted in the Department of Computer Science of the Soban Singh Jeena University, Almora is an authentic record of my own work carried out under the supervision of Dr. Manoj Kumar Bisht, Soban Singh University Almora.
+
+The matter presented in this dissertation has not been submitted by me for the award of any other degree of this or any other University/Institution.
+\vspace*{2cm}
+\begin{flushright}
+\textbf{(Anubhav Mehra)}\\
+Candidate\\
+\vspace*{2cm}
+\textbf{(Dr. Manoj Kumar Bisht)}\\
+Supervisor\\
+\vspace*{1cm}
+\textbf{Date: \line(1,0){60}}
+\end{flushright}
+\thispagestyle{empty}
+\clearpage
 \begin{center}
 \textbf{\underline{ABSTRACT}} \\ [0.5ex]
 \end{center}
- Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
+ Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a bidirectional pre-trained language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
 
 \textbf{Keywords:} Sentiment Analysis, Emotion AI,  Natural Language Processing, Transfer Learning, BERT, Multilingual Natural Language Processing, Hindi Sentiment Analysis.
 \thispagestyle{empty}
@@ -237,8 +266,8 @@ Test F1 to 83.1.\cite{devlin_bert_2019}
 
 IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others.\cite{joshi_fall-back_nodate}
 
-In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors indtroduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses.\cite{kumar_bhaav_2019}
-My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset I decided to use the approach of BERT Model.
+In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors introduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses.\cite{kumar_bhaav_2019}
+My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset we decided to use the approach presented in the next chapter.
 \clearpage
 \section{Methodology and Implementation}
 
@@ -247,7 +276,7 @@ This section details the methodology and implementation details of the project. 
 \subsection{Dataset}
 
 After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaav_2019}
- , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, I found a github repository\cite{sinha_sid573hindi_sentiment_analysis_2021}
+ , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, we found a github repository\cite{sinha_sid573hindi_sentiment_analysis_2021}
  which had the dataset appropriate for sentiment analysis. The dataset here contains various tweets in Hindi along with corresponding label describing the emotional tone of the tweet. The categories of the label are \textit{negative}, \textit{neutral}, \textit{positive}. Figure \ref{dataset} shows some record in the dataset.
  
  \begin{figure}[H]
