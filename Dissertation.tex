@@ -16,7 +16,7 @@
 \addbibresource{ref.bib}
 
 %End Package_List ----------
-\titleformat*{\section}{\huge\bfseries}
+\titleformat*{\section}{\Large\bfseries}
 \titleformat*{\subsection}{\large\bfseries}
 \titleformat*{\subsubsection}{\large\bfseries}
 \titleformat*{\paragraph}{\normalsize\bfseries}
@@ -98,7 +98,7 @@ Transfer Learning is a Machine Learning method where a model that is trained for
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.45]{tl.png}
-\caption{Differentiation between Traditional and Transfer Learning Methodology. \label{tl}} %cite here guide to tl 
+\caption{Differentiation between Traditional and Transfer Learning Methodology. \cite{noauthor_guide_2019} \label{tl}}
 \end{center}
 \end{figure}
 
@@ -156,7 +156,7 @@ Listed below are some applications of Sentiment Analysis:
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.7]{cat.png}
-\caption{Application of Sentiment Analysis. \label{cat}} %cite here the application of SA
+\caption{Application of Sentiment Analysis. \cite{smetanin_applications_2020} \label{cat}}
 \end{center}
 \end{figure}
 
@@ -183,11 +183,11 @@ This section details various concepts behind this project, their workings and al
 \subsection{Concept of Transfer Learning}
 
 \subsubsection{General Idea}
-While, we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions. %cite ruder.io
+While, we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions. \cite{noauthor_transfer_2017}
 
 So to make a generalizing model the dataset required that would enable the model to learn the working in the real world would be astoundingly huge. Collecting such dataset may be difficult, expensive and can also be downright impossible in many cases. So for a solution we turns our head towards transfer learning.
 
-Humans are generally very good at transfer learning. We use our knowledge at one task to solve a related task all the time. For example, if you have any experience programming with Java, C/C++ or any other programming languages, you’re already familiar with concepts like loops, recursion, objects and etc (Figure \ref{human}, a). If you then try to pick up a new programming language like python, you don’t need to learn these concepts again, you just need to learn the corresponding syntax. Or to take another example, if you have played table tennis a lot it will help you learn tennis faster as the strategies in these games are similar (Figure \ref{human}, b). %cite medium article
+Humans are generally very good at transfer learning. We use our knowledge at one task to solve a related task all the time. For example, if you have any experience programming with Java, C/C++ or any other programming languages, you’re already familiar with concepts like loops, recursion, objects and etc (Figure \ref{human}, a). If you then try to pick up a new programming language like python, you don't need to learn these concepts again, you just need to learn the corresponding syntax. Or to take another example, if you have played table tennis a lot it will help you learn tennis faster as the strategies in these games are similar (Figure \ref{human}, b). %cite medium article
 
 \begin{figure}[H]
 \begin{center}
@@ -202,42 +202,42 @@ In Transfer Learning as compared to Traditional Learning  where models are train
 
 Following is the definition of Transfer Learning in terms of domain and tasks.
 
-A domain $D$ consists of: a feature space $X$ and a marginal probability distribution $P(X), where\ X = \{x1, ...., xn\} \in X$.  Give a specific domain, $D = \{X, P(X)\}$, a task consists of two components: a label space $Y$ and an objective function $f: X \rightarrow Y$. The function $f$ is used to predict the corresponding label $f(x)$ of a new instance $x$. This task, denoted by $T = \{Y, f(x)\}$, is learned from the training data consists of pairs $\{x_i, y_i\}$, where $x_i \in X$ and $y_i \in Y$. %cite Lin and Jung
+A domain $D$ consists of: a feature space $X$ and a marginal probability distribution $P(X), where\ X = \{x1, ...., xn\} \in X$.  Give a specific domain, $D = \{X, P(X)\}$, a task consists of two components: a label space $Y$ and an objective function $f: X \rightarrow Y$. The function $f$ is used to predict the corresponding label $f(x)$ of a new instance $x$. This task, denoted by $T = \{Y, f(x)\}$, is learned from the training data consists of pairs $\{x_i, y_i\}$, where $x_i \in X$ and $y_i \in Y$. \cite{lin_improving_2017}
 
-Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and learning task $T_T$, where $D_S \ne D_T$, or $T_S \ne T_T$, transfer learning aims to help improve the learning of the target predictive function $f_T( \bullet ) \ in \ D_T$ using the knowledge $D_S$ and $D_T$. %cite Lin and Jung
+Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and learning task $T_T$, where $D_S \ne D_T$, or $T_S \ne T_T$, transfer learning aims to help improve the learning of the target predictive function $f_T( \bullet ) \ in \ D_T$ using the knowledge $D_S$ and $D_T$. \cite{lin_improving_2017}
 
 \subsection{Sentiment Analysis using Transfer Learning}
 
-The current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labeling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning. %cite liu at al
+The current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labeling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning. \cite{liu_survey_2019}
 
 \subsubsection{Language Model Pre-Training}
 
-The intuition behind pre-trained language models is to create a black box which understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of unannotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine tune and create the final model capable of performing the aforementioned task. %cite ganesh
+The intuition behind pre-trained language models is to create a black box which understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of annotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine tune and create the final model capable of performing the aforementioned task. \cite{ganesh_pre-trained_2019}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.5]{lm.png}
-\caption{ Language Model Pre-Training Workflow} %cite ganesh
+\caption{ Language Model Pre-Training Workflow.\cite{ganesh_pre-trained_2019}} 
 \end{center}
 \end{figure}
 
-Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed. %cite Howard and Ruder.
+Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed. \cite{howard_universal_2018}
 
 \subsubsection{BERT Model}
 
-\textbf{BERT}, which stands for \textbf{B}idirectional  \textbf{E}ncoder  \textbf{R}epresentations from  \textbf{T}ransformers is designed to pre-train deep bidirectional representations from unlabeled text by jointly condition on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of NLP tasks. %cite BERT
+\textbf{BERT}, which stands for \textbf{B}idirectional  \textbf{E}ncoder  \textbf{R}epresentations from  \textbf{T}ransformers is designed to pre-train deep bidirectional representations from unlabeled text by jointly condition on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of NLP tasks. \cite{devlin_bert_2019}
 
-BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing GLUE %cite GLUE
-score to $80.5 \%$ , MultiNLI %cite multiNLI
-accuracy to $86.7\%$, SQuAD v1.1 %cite SQUAD
-question answering test F1 to 93.2  and SQuAD v2.0 %cite SQUAD
-Test F1 to 83.1. %cite BERT
+BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing GLUE\cite{wang_glue_2018}
+ score to $80.5 \%$ , MultiNLI\cite{williams_broad-coverage_2018}
+accuracy to $86.7\%$, SQuAD v1.1\cite{rajpurkar_squad_2016}
+question answering test F1 to 93.2  and SQuAD v2.0\cite{rajpurkar_squad_2016}
+Test F1 to 83.1.\cite{devlin_bert_2019}
 
 \subsection{Related Work}
 
-IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others. %cite hindi sentiment analysis stratergy
+IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others.\cite{joshi_fall-back_nodate}
 
-In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors indtroduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses. %cite Bhaav
+In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors indtroduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses.\cite{kumar_bhaav_2019}
 My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset I decided to use the approach of BERT Model.
 \clearpage
 \section{Methodology and Implementation}
@@ -246,8 +246,8 @@ This section details the methodology and implementation details of the project. 
 
 \subsection{Dataset}
 
-After the initial failure to get the access to the BHAAV dataset %cite BHAAV
- , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, I found a github repository %cite github repo.
+After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaav_2019}
+ , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, I found a github repository\cite{sinha_sid573hindi_sentiment_analysis_2021}
  which had the dataset appropriate for sentiment analysis. The dataset here contains various tweets in Hindi along with corresponding label describing the emotional tone of the tweet. The categories of the label are \textit{negative}, \textit{neutral}, \textit{positive}. Figure \ref{dataset} shows some record in the dataset.
  
  \begin{figure}[H]
@@ -261,7 +261,7 @@ After the initial failure to get the access to the BHAAV dataset %cite BHAAV
  
  \subsection{Preprocessing}
  
- There is not a lot of preprocessing done to the dataset. The first thing that is done is to encode the categorical data in label column as the model works on numerical values not text values. Label Encoding technique is used for this purpose. \textbf{Label Encoding} refers to converting the labels into numeric form so as to convert it into the machine-readable form. Machine learning algorithms can then decide in a better way on how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning. %cite gfg
+ There is not a lot of preprocessing done to the dataset. The first thing that is done is to encode the categorical data in label column as the model works on numerical values not text values. Label Encoding technique is used for this purpose. \textbf{Label Encoding} refers to converting the labels into numeric form so as to convert it into the machine-readable form. Machine learning algorithms can then decide in a better way on how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning.\cite{noauthor_ml_2018}
  We have three categories in our label data namely \textit{negative}, \textit{neutral}, and \textit{positive}. These will be converted to \textit{0} , \textit{1} and \textit{2} respectively.
  
  Secondly, for input we need to tokenize input as most NLP model are trained on tokens. For this we need to first make all the inputs of number of words . We do this by finding a cutoff number of words. For this we draw a histogram plot of all the inputs based on the total number of words they have and choose number of words that would satisfy most of the inputs. Figure \ref{plot} show the histogram distribution of input based on the total no. of words present in the piece of writing. And as we can see 35, is a good place to put our  cutoff. So that's what we've done. 
@@ -274,14 +274,14 @@ After the initial failure to get the access to the BHAAV dataset %cite BHAAV
  \end{figure}
  Then we have used to BERTTokenizerFast , a tokenizer pre-trained on multilingual dataset corpus. Tokenizer prepares our input in the following ways.
  \begin{itemize}
- \item{Tokenizing (splitting strings in sub-word token strings), converting tokens strings to ids and back, and encoding/decoding (i.e., tokenizing and converting to integers).} %cite BERT TOKENIZER
+ \item{Tokenizing (splitting strings in sub-word token strings), converting tokens strings to ids and back, and encoding/decoding (i.e., tokenizing and converting to integers).}\cite{noauthor_tokenizer_nodate}
 
-\item{Adding new tokens to the vocabulary in a way that is independent of the underlying structure (BPE, SentencePiece…).} %cite BERT TOKENIZER
+\item{Adding new tokens to the vocabulary in a way that is independent of the underlying structure (BPE, SentencePiece…).}\cite{noauthor_tokenizer_nodate}
 
-\item{Managing special tokens (like mask, beginning-of-sentence, etc.): adding them, assigning them to attributes in the tokenizer for easy access and making sure they are not split during tokenization.} %cite BERT TOKENIZER
+\item{Managing special tokens (like mask, beginning-of-sentence, etc.): adding them, assigning them to attributes in the tokenizer for easy access and making sure they are not split during tokenization.}\cite{noauthor_tokenizer_nodate}
  \end{itemize}
  
- After the tokenization process is done we've feed these tokens as pytorch % cite pytorch
+ After the tokenization process is done we've feed these tokens as pytorch\cite{noauthor_pytorch_nodate}
   tensors to be later transformed into pytorch DataClasses, which will be then used for training and validating in batches of fixed size. We have selected the batch size of 32.
   
   \subsection{Model}
@@ -292,17 +292,17 @@ After the initial failure to get the access to the BHAAV dataset %cite BHAAV
   
   \item{Then the output of the BERT model is fed to the first layer of our model which contains 768 input, and 512 output Nodes. We have used the \textbf{Re}ctified \textbf{L}inear \textbf{U}nit activation function also called ReLU function at this layer. It is defined as $R(z) = max(0,z)$. It is usually a good first choice for an activation function based on some empirical evidences.}
   
-  \item{Then we have used a dropout layer to which the output from first layer is passed to. This layer prevents from the problem of over fitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. } %cite droupout layer article
+  \item{Then we have used a dropout layer to which the output from first layer is passed to. This layer prevents from the problem of over fitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. }\cite{srivastava_dropout_nodate}
   
   \item{The output from the dropout layer is passed to our output layer. The output layer consists of 512 input nodes (same as the output of first layer) and 3 output nodes. As we have three categories to classify our data, therefore we've used 3 output nodes. The activation function used in this layer is the softmax function. The standard softmax function: $ \sigma : \mathbb{R}^K \rightarrow [0,1]^K $ is defined as \large
   $\sigma(z)_i = \frac{e^{z_i}}{\sum_{j = 1} ^{ K} e^{z_j}}\  for\  i = 1, ... , K\  and\  z = (z1, ..., z_K) \in \mathbb{R}^K$. 
   \normalsize
-  The softmax function is used to normalize the output of the  network to a probability distribution over predicted output classes. } %cite softmax wikipedia
+  The softmax function is used to normalize the output of the  network to a probability distribution over predicted output classes. }\cite{noauthor_softmax_2021}
   
   \end{itemize}
   
-  We use \textit{sklearn.utils.class\_weight.compute\_class\_weight} library function to estimate initial weights for our model. This function estimates weights using heuristic inspired by  Logistic Regression in Rare Events Data, King, Zen, 2001. %cite this paper
-  To calculate the loss we are using the cross entropy loss function. For a multiclass classification problem as we have, the cross entropy loss function can be defined as \large $- \sum_{c=1}^{M} y_{o,c} \ln(p_o,c)$. %cite loss function
+  We use \textit{sklearn.utils.class\_weight.compute\_class\_weight} library function to estimate initial weights for our model. This function estimates weights using heuristic inspired by  Logistic Regression in Rare Events Data, King, Zen, 2001.\cite{king_logistic_2001}
+  To calculate the loss we are using the cross entropy loss function. For a multiclass classification problem as we have, the cross entropy loss function can be defined as \large $- \sum_{c=1}^{M} y_{o,c} \ln(p_o,c)$.\cite{noauthor_loss_nodate}
   \normalsize
   
   \subsection{Training and Validation Process}
