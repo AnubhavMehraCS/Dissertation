@@ -362,7 +362,55 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
   
   The predictions generated from our model is then used along with the labeled data of the test dataset to generate a classification report detailing the performance of our model. The classification report along with its analysis is given in the next chapter
   \clearpage
-  \section{Result and Conclusion}
+  \section{Result, Analysis and Conclusion}
+  
+  \subsection{Result and Analysis}
+  
+  We've used the \textit{sklearn.metrics.classification\_report} method to generate the classification report of our model's performance. Table \ref{report} shows the generated report in tabular form. 
+  \begin{table}[H]
+  \begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+             & precision & recall & f1-score & support \\
+             \hline
+             \hline
+0            & 0.68      & 0.69   & 0.68     & 464     \\
+\hline
+1            & 0.78      & 0.90   & 0.83     & 388     \\
+\hline
+2            & 0.72      & 0.63   & 0.68     & 510     \\
+\hline
+             &           &        &          &         \\
+             \hline
+accuracy     &           &        & 0.73     & 1362    \\
+\hline
+macro avg    & 0.73      & 0.74   & 0.73     & 1362    \\
+\hline
+weighted avg & 0.72      & 0.73   & 0.72     & 1362   \\
+\hline
+\end{tabular}
+  \end{center}
+  \caption{The classification report of our model's performance.\label{report}}
+\end{table}
+
+The aforementioned table consists of many classification metrics for all the three classes, i.e \textbf{0 - negative} , \textbf{1 - neutral}, and \textbf{2 - positive}, along with the overall accuracy of the model. The metrics as described in the scikit's Yellowbrick library are:
+\begin{itemize}
+\item{\textbf{precision} \\ 
+Precision can be seen as a measure of a classifier's exactness. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, "for all instances classified positive, what percent was correct?"}
+
+\item{\textbf{recall} \\ 
+Recall is a measure of the classifier's completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, "for all instances that were actually positive, what percent was classified correctly?" }
+\item{\textbf{f1 score} \\
+The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.
+}
+\item{\textbf{support}
+Support is the number of actual occurrences of the class in the specified dataset. Imbalanced support in the training data may indicate structural weaknesses in the reported scores of the classifier and could indicate the need for stratified sampling or re balancing. Support doesn't change between models but instead diagnoses the evaluation process. }
+\end{itemize}
+The \textbf{macro average} can be described as the average of the metric for all the classes \textit{without} taking the proportion of each class into account. The \textbf{weighted average} is the average of the metric for all the classes \textit{with} taking the proportion of each label into account.
+
+\subsection{Conclusion}
+
+So, with the overall accuracy of \textbf{0.73} or \textbf{73\%} we can say that this is a decently good result for a relatively small dataset. This showcase the promise of transfer learning in the domain of Natural Language Processing for low resource languages like \textbf{Hindi}. Our classification report also shows that we performed very good for \textbf{neutral} cases as compared to the other too. We believe this is due to not given enough time and resource to train, the model doesn't get to learn polarity much adequately but nothing can be said with certainty  at this point. In the next chapter, we highlight some of the future work and improvements that will increase the robustness and performance of our model.
   \clearpage
   \section{Further work and improvement}
   The model and the process detailed in this dissertation can be improved with more work. 
