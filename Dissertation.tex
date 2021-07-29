@@ -220,12 +220,12 @@ While, we have new and better techniques of developing deep neural networks that
 
 So to make a generalizing model the dataset required that would enable the model to learn the working in the real world would be astoundingly huge. Collecting such dataset may be difficult, expensive and can also be downright impossible in many cases. So for a solution we turns our head towards transfer learning.
 
-Humans are generally very good at transfer learning. We use our knowledge at one task to solve a related task all the time. For example, if you have any experience programming with Java, C/C++ or any other programming languages, you’re already familiar with concepts like loops, recursion, objects and etc (Figure \ref{human}, a). If you then try to pick up a new programming language like python, you don't need to learn these concepts again, you just need to learn the corresponding syntax. Or to take another example, if you have played table tennis a lot it will help you learn tennis faster as the strategies in these games are similar (Figure \ref{human}, b). %cite medium article
+Humans are generally very good at transfer learning. We use our knowledge at one task to solve a related task all the time. For example, if you have any experience programming with Java, C/C++ or any other programming languages, you’re already familiar with concepts like loops, recursion, objects and etc (Figure \ref{human}, a). If you then try to pick up a new programming language like python, you don't need to learn these concepts again, you just need to learn the corresponding syntax. Or to take another example, if you have played table tennis a lot it will help you learn tennis faster as the strategies in these games are similar (Figure \ref{human}, b).\cite{asgarian_transfer_2019}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.25]{human_lt.png}
-\caption{Transferring the learned knowledge in humans.\label{human}} % cite medium article
+\caption{Transferring the learned knowledge in humans.\cite{asgarian_transfer_2019}\label{human}}
 \end{center}
 \end{figure}
 
@@ -396,15 +396,15 @@ weighted avg & 0.72      & 0.73   & 0.72     & 1362   \\
 The aforementioned table consists of many classification metrics for all the three classes, i.e \textbf{0 - negative} , \textbf{1 - neutral}, and \textbf{2 - positive}, along with the overall accuracy of the model. The metrics as described in the scikit's Yellowbrick library are:
 \begin{itemize}
 \item{\textbf{precision} \\ 
-Precision can be seen as a measure of a classifier's exactness. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, "for all instances classified positive, what percent was correct?"}
+Precision can be seen as a measure of a classifier's exactness. For each class, it is defined as the ratio of true positives to the sum of true and false positives. Said another way, "for all instances classified positive, what percent was correct?"\cite{noauthor_classification_nodate}}
 
 \item{\textbf{recall} \\ 
-Recall is a measure of the classifier's completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, "for all instances that were actually positive, what percent was classified correctly?" }
+Recall is a measure of the classifier's completeness; the ability of a classifier to correctly find all positive instances. For each class, it is defined as the ratio of true positives to the sum of true positives and false negatives. Said another way, "for all instances that were actually positive, what percent was classified correctly?"\cite{noauthor_classification_nodate} }
 \item{\textbf{f1 score} \\
-The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.
+The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.\cite{noauthor_classification_nodate}
 }
 \item{\textbf{support}
-Support is the number of actual occurrences of the class in the specified dataset. Imbalanced support in the training data may indicate structural weaknesses in the reported scores of the classifier and could indicate the need for stratified sampling or re balancing. Support doesn't change between models but instead diagnoses the evaluation process. }
+Support is the number of actual occurrences of the class in the specified dataset. Imbalanced support in the training data may indicate structural weaknesses in the reported scores of the classifier and could indicate the need for stratified sampling or re balancing. Support doesn't change between models but instead diagnoses the evaluation process.\cite{noauthor_classification_nodate} }
 \end{itemize}
 The \textbf{macro average} can be described as the average of the metric for all the classes \textit{without} taking the proportion of each class into account. The \textbf{weighted average} is the average of the metric for all the classes \textit{with} taking the proportion of each label into account.
 
