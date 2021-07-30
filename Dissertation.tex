@@ -99,7 +99,7 @@ Head and Convener \hspace*{9.5cm} Supervisor\\ [2cm]
 \begin{center}
 \textbf{\underline{DECLARATION}}
 \end{center}
-I declare that this written submission represents my ideas in my own words and where others' ideas or words have been included, I have adequately cited and referenced the original sources. I also declare that I have adhered to all the principles of academic honesty and integrity and have not  misrepresented or fabricated or falsified any idea/data/fact/source in my submission. I understand that any violation of the above will be cause of disciplinary action by the University and can also evoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been taken when needed.
+I declare that this written submission represents my ideas in my own words and where others' ideas or words have been included, I have adequately cited and referenced the original sources. I also declare that I have adhered to all the principles of academic honesty and integrity and have not  misrepresented or fabricated or falsified any idea/data/fact/source in my submission. I understand that any violation of the above will because of disciplinary action by the University and can also evoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been taken when needed.
 \begin{flushright}
 Anubhav Mehra \\
 \today
@@ -114,7 +114,7 @@ It is a genuine pleasure to express my deep sense of gratitude to my mentor and 
 
 I would also like to extend my gratitude to the Department of Computer Science, S.S.J University, Almora HOD ma'am \textbf{Dr. Parul Saxena} and all other faculty members who have been of great help during the course of this project.
 
-Finally I would like to thanks my head \textbf{Dr. Ashish Mehta}, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
+Finally, I would like to thanks my head \textbf{Dr. Ashish Mehta}, Department of Computer Science, DSB Campus Nainital for his immense help and providing me with time to complete my dissertation work.
 \thispagestyle{empty}
 \clearpage
 
@@ -122,7 +122,7 @@ Finally I would like to thanks my head \textbf{Dr. Ashish Mehta}, Department of 
 \begin{center}
 \textbf{\underline{ABSTRACT}} \\ [0.5ex]
 \end{center}
- Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, to train a model for sentiment analysis require very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a bidirectional pre-trained language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pertained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pertained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
+ Sentiment analysis is a \textbf{natural language processing} technique to find if the sentiment of the text is positive, neutral or negative. Traditionally, training a model for sentiment analysis requires very dense neural networks to train on very huge datasets. But, here we have used a technique called \textbf{Transfer Learning} that stores a model which has learned some knowledge, that we can leverage in solving some other tasks based on the knowledge of the previous model. Here we are using a bidirectional pre-trained language model called  \textbf{BERT(Bidirectional Encoder Representations from Transformers)}. BERT is a pre-trained model which learns using the learning techniques developed by Google. The BERT multilingual base model that we are using is pre-trained on the top 104 languages including Hindi. We then leverage the power of this model for the Sentiment analysis of the Hindi texts dataset that we've got. This allows us to achieve moderately high accuracy scores using a comparatively small dataset.
 
 \textbf{Keywords:} Sentiment Analysis, Emotion AI,  Natural Language Processing, Transfer Learning, BERT, Multilingual Natural Language Processing, Hindi Sentiment Analysis.
 \thispagestyle{empty}
@@ -138,7 +138,7 @@ Finally I would like to thanks my head \textbf{Dr. Ashish Mehta}, Department of 
 \section{Introduction}
 
 \subsection{Transfer Learning}
-Transfer Learning is a Machine Learning method where a model that is trained for a certain task is utilized as the starting point for solving some other task i.e., to train a second model from the knowledge learned from the first model as well as the dataset. It is a very popular approach in natural language processing domain to solve problems such as getting the context of the text.
+Transfer Learning is a Machine Learning method where a model that is trained for a certain task is utilized as the starting point for solving some other task i.e., to train a second model from the knowledge learned from the first model as well as the dataset. It is a very popular approach in the Natural Language Processing domain to solve problems such as getting the context of the text.
 
 \begin{figure}[H]
 \begin{center}
@@ -147,14 +147,14 @@ Transfer Learning is a Machine Learning method where a model that is trained for
 \end{center}
 \end{figure}
 
-The inspiration for transfer learning comes from us - humans, ourselves - where in, we have an inherent ability to not learn everything from scratch. We transfer and leverage our knowledge from what we have learn in the past for tackling a wide variety of tasks.\cite{sarkar_deep_2018}
+The inspiration for transfer learning comes from us - humans, ourselves - wherein, we have an inherent ability to not learn everything from scratch. We transfer and leverage our knowledge from what we have learned in the past for tackling a wide variety of tasks.\cite{sarkar_deep_2018}
 
 \large \textbf{Deciding when to use Transfer Learning} \\ [0.5ex]
 \normalsize
-As with any technique at our disposal we must have a very clear reason on using transfer learning. First and foremost, we must realize that we can't use transfer learning in every situation. This is because for transfer learning to work we must have a model trained on a similar task. As with the problem concerned in our dissertation here, we have  a language model available which is trained in recognizing linguistic structure of  various languages. Now, we can leverage the power of this model to train a new model for our
+As with any technique at our disposal, we must have a very clear reason for using transfer learning. First and foremost, we must realize that we can't use transfer learning in every situation. This is because for transfer learning to work we must have a model trained on a similar task. As with the problem concerned in our dissertation here, we have  a language model available which is trained in recognizing the linguistic structure of  various languages. Now, we can leverage the power of this model to train a new model for our
 \thispagestyle{empty}
 \clearpage
- context analysis problem. If this is the case, you will realize that transfer learning is a very decent technique to use for acquiring better results and that too in very short amount of time than traditional methods. Now, with this out of the way you may want to use transfer learning if you have following conditions:
+ context analysis problem. If this is the case, you will realize that transfer learning is a very decent technique to use for acquiring better results and that too in a very short amount of time than traditional methods. Now, with this out of the way you may want to use transfer learning if you have the following conditions:
 \begin{itemize}
 \item{You have a smaller dataset}
 \item{You are constrained on time}
@@ -162,7 +162,7 @@ As with any technique at our disposal we must have a very clear reason on using 
 
 \large \textbf{Applications of Transfer Learning} \\ [0.5ex]
 \normalsize
-There are various applications of Transfer Learning in variety of domains. In \textbf{Image Recognition}, transfer learning can be used to perform various imaging tasks. For e.g.,  a model trained to identify face can be used for facial recognition. Transfer Learning can also be used in \textbf{Speech Recognition} tasks.  For e.g., a model trained in a particular language for speech recognition can be used to train a model for speech authentication. But our key domain of interest where we are most interested in using this technique is \textbf{Natural Language Processing}. Transfer learning can be used to solve various tasks in  NLP. For e.g., a model trained in recognizing the linguistic structure of a language can be used to train a model to predict next word based on the series of words it gets in the previous sentences.
+There are various applications of Transfer Learning in a variety of domains. In \textbf{Image Recognition}, transfer learning can be used to perform various imaging tasks. For e.g.,  a model trained to identify faces can be used for facial recognition. Transfer Learning can also be used in \textbf{Speech Recognition} tasks.  For e.g., a model trained in a particular language for speech recognition can be used to train a model for speech authentication. But our key domain of interest where we are most interested in using this technique is \textbf{Natural Language Processing}. Transfer learning can be used to solve various tasks in  NLP. For e.g., a model trained in recognizing the linguistic structure of a language can be used to train a model to predict the next word based on the series of words it gets in the previous sentences.
 
 \subsection{Sentiment Analysis}
 One such task in NLP is \textbf{Sentiment Analysis}. Sentiment Analysis or emotion AI, is the process in natural language processing  of subjective emotional analysis of the text. Primarily sentiment analysis finds if the emotional tone of a piece of writing is \textbf{\textit{positive, neutral or negative}}. \textbf{Table \ref{table: category}} lists some examples of what a sentiment analysis categorization may look like.
@@ -183,18 +183,18 @@ Bollywood movies are not entertaining & Negative \\ [0.5ex]
 \end{tabularx}
 \end{table}
 
-As we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer this is a very challenging problem. It is a challenging problem because the way humans communicate using natural languages is extremely varied depending  upon \textit{subjectivity}, \textit{use of irony}, and the \textit{context} of the phrase. Not all verbs, nouns and pronouns can be treated equally when analyzing the emotional tone of the text. The tone of our phrases depends on how we are using them, when we are using them and for what we are using them. For e.g., the phrase \textit{absolutely everything}, can be an answer to a question like \textit{What are you so happy about?} or can equally be an answer to a completely opposite  question \textit{What are you so sad about?}. Thus, the emotional tone of the phrase can have completely separate meaning depending upon the various parameters. In the example above, the context of the phrase can alter the emotional meaning of the phrase completely. 
+As we can see it is easily understood by a human brain what sentiments these pieces of writing represent. But, for a computer, this is a very challenging problem. It is a challenging problem because the way humans communicate using natural languages is extremely varied depending  upon \textit{subjectivity}, \textit{use of irony}, and the \textit{context} of the phrase. Not all verbs, nouns and pronouns can be treated equally when analyzing the emotional tone of the text. The tone of our phrases depends on how we are using them, when we are using them and for what we are using them. For e.g., the phrase \textit{absolutely everything}, can be an answer to a question like \textit{What are you so happy about?} or can equally be an answer to a completely opposite  question \textit{What are you so sad about?}. Thus, the emotional tone of the phrase can have completely separate meanings depending upon the various parameters. In the example above, the context of the phrase can alter the emotional meaning of the phrase completely. 
 
 \large \textbf{Applications of Sentiment Analysis} \\[0.5ex]
 \normalsize
 Listed below are some applications of Sentiment Analysis:
 \begin{itemize}
 \item{
-\textbf{Social Media Monitoring: } Sentiment analysis is very useful tool to find out what is a general sentiment of people in social media towards a product, person, situation, trend or any such topic of interest.}
+\textbf{Social Media Monitoring: } Sentiment analysis is a very useful tool to find out what is a general sentiment of people in social media towards a product, person, situation, trend or any such topic of interest.}
 \item{
-\textbf{Feedback Analysis: } Sentiment analysis can also be used to find the whether the  reception of new policies or workings of a company or of a government is positive or negative. This helps a company or government to evaluate their policies and performance using a well-defined metric.}
+\textbf{Feedback Analysis: } Sentiment analysis can also be used to find whether the  reception of new policies or workings of a company or of a government is positive or negative. This helps a company or government to evaluate its policies and performance using a well-defined metric.}
 \item{
-\textbf{Market Research: } Sentiment analysis can also be used to find what topics are viewed in positive and negative light in current landscape. This information can then be used to design or steer a companies marketing campaign to align with those sentiments.}
+\textbf{Market Research: } Sentiment analysis can also be used to find what topics are viewed in a positive or negative light in the current landscape. This information can then be used to design or steer a companies marketing campaign to align with those sentiments.}
 \end{itemize}
 
 
@@ -207,10 +207,10 @@ Listed below are some applications of Sentiment Analysis:
 
 \subsection{Purpose}
 
-The purpose of this project is to showcase the use of Transfer Learning in developing a model for Sentiment Analysis of Social Media Posts( tweets in this case) posted in Hindi Language. Thus, calculating the accuracy of the model trained on a relatively small dataset and quick training time compared to those that would have been required if we would've followed a Traditional ML route. Hence, contributing in the field of Machine Learning and Data Science for any future project work in technology development.
+The purpose of this project is to showcase the use of Transfer Learning in developing a model for Sentiment Analysis of Social Media Posts( tweets in this case) posted in the Hindi Language. Thus, calculating the accuracy of the model trained on a relatively small dataset and quick training time compared to those that would have been required if we would've followed a Traditional ML route. Hence, contributing to the field of Machine Learning and Data Science for any future project work in technology development.
 
 \subsection{Dissertation Structure}
-\textbf{Chapter 2:} This chapter discusses the literature review of this project. It discusses the concepts of this project, related an similar works done.
+\textbf{Chapter 2:} This chapter discusses the literature review of this project. It discusses the concepts of this project, related and similar works done.
 
 \textbf{Chapter 3:} This section describes the steps of the method followed to complete the project, which includes data sourcing, data preprocessing, model selection, model implementation, accuracy score calculation.
 
@@ -228,9 +228,9 @@ This section details various concepts behind this project, their workings and al
 \subsection{Concept of Transfer Learning}
 
 \subsubsection{General Idea}
-While, we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions.\cite{noauthor_transfer_2017}
+While we have new and better techniques of developing deep neural networks that are astoundingly great at predicting outputs for particular features set. We still have a problem at hand. What our models still frightfully lack is the ability to generalize to conditions that are different from the ones encountered during training. When is this necessary? Every time you apply your model not to a carefully constructed dataset but to the real world. The real world is messy and contains an infinite number of novel scenarios, many of which your model has not encountered during training and for which it is in turn ill-prepared to make predictions.\cite{noauthor_transfer_2017}
 
-So to make a generalizing model the dataset required that would enable the model to learn the working in the real world would be astoundingly huge. Collecting such dataset may be difficult, expensive and can also be downright impossible in many cases. So for a solution we turns our head towards transfer learning.
+So to make a generalizing model the dataset required that would enable the model to learn the working in the real world would be astoundingly huge. Collecting such a dataset may be difficult, expensive and can also be downright impossible in many cases. So for a solution, we turn our head towards transfer learning.
 
 Humans are generally very good at transfer learning. We use our knowledge at one task to solve a related task all the time. For example, if you have any experience programming with Java, C/C++ or any other programming languages, you’re already familiar with concepts like loops, recursion, objects and etc (Figure \ref{human}, a). If you then try to pick up a new programming language like python, you don't need to learn these concepts again, you just need to learn the corresponding syntax. Or to take another example, if you have played table tennis a lot it will help you learn tennis faster as the strategies in these games are similar (Figure \ref{human}, b).\cite{asgarian_transfer_2019}
 
@@ -241,7 +241,7 @@ Humans are generally very good at transfer learning. We use our knowledge at one
 \end{center}
 \end{figure}
 
-In Transfer Learning as compared to Traditional Learning  where models are trained in complete  isolation, we use the knowledge gained by a model in solving a task of similar domain to train our desired model to solve some other task.
+In Transfer Learning as compared to Traditional Learning  where models are trained in complete  isolation, we use the knowledge gained by a model in solving a task of the similar domain to train our desired model to solve some other task.
 
 \subsubsection{Definition of Transfer Learning}
 
@@ -253,11 +253,11 @@ Give a source dome $D_S$ and learning Task $T_S$, a target domain $D_T$  and lea
 
 \subsection{Sentiment Analysis using Transfer Learning}
 
-The current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labeling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning.\cite{liu_survey_2019}
+In the current landscape of sentiment analysis most sentiment analysis methods are classified from two perspectives. One is according to the granularity of text analysis, which is divided into three aspects: document level, statement level and aspect level. The other is according to the principle of method, it is mainly divided into three types: rule-based, machine learning, and deep learning. However, with the increasing volume of information, the collected data that need to be analyzed are huge, chaotic and irregular. This has brought more difficulties for sentiment analysis as large data labelling and high cost of computing. Although the traditional sentiment analysis methods have some advantages, they are more limited due to massive data requirements in practical applications. Therefore, researchers have combined sentiment analysis and transfer learning.\cite{liu_survey_2019}
 
 \subsubsection{Language Model Pre-Training}
 
-The intuition behind pre-trained language models is to create a black box which understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of annotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine tune and create the final model capable of performing the aforementioned task.\cite{ganesh_pre-trained_2019}
+The intuition behind pre-trained language models is to create a black box that understands the language and can then be asked to do any specific task in that language. The language model is first fed a large amount of annotated data (for example, the complete Wikipedia dump). This lets the model learn the usage of various words and how the language is written in general. The model is now transferred to an NLP task where it is fed another smaller task-specific dataset, which is used to fine-tune and create the final model capable of performing the aforementioned task.\cite{ganesh_pre-trained_2019}
 
 \begin{figure}[H]
 \begin{center}
@@ -266,7 +266,7 @@ The intuition behind pre-trained language models is to create a black box which 
 \end{center}
 \end{figure}
 
-Language model pre-training are extremely effective for improving many natural language processing task. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed.\cite{howard_universal_2018}
+Language models pre-training is extremely effective for improving many natural language processing tasks. As the \textit{ULMfit} fine-tuning approach of Language-Model pre-training has showed.\cite{howard_universal_2018}
 
 \subsubsection{BERT Model}
 
@@ -280,9 +280,9 @@ Test F1 to 83.1.\cite{devlin_bert_2019}
 
 \subsection{Related Work}
 
-IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others.\cite{joshi_fall-back_nodate}
+IIT Bombay did some research on developing strategies  for Sentiment Analysis in Hindi.  In the paper, they considered three approaches. The first to construct a classifier model for Hindi using a training corpus in Hindi. The second approach is to train a model on annotated English corpus and translate a Hindi document to English in order to use this model. The third approach involves using a majority-based classifier for Hindi SentiWordNet. The results of the research show that the first approach outperforms the others.\cite{joshi_fall-back_nodate}
 
-In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, authors introduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stores spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discuss challenges in the annotation of low resource language such as Hindi, and discuss the proposed corpus along with its possible uses.\cite{kumar_bhaav_2019}
+In the paper titled BHAAV - A Text Corpus for emotion analysis from Hindi Stories, the authors introduce the first and largest Hindi text corpus named BHAAV. The corpus consists of 20,304 sentences collected from 230 different short stories spanning across 18 genres. Each sentence has been annotated into one of the five emotion categories \{ \textit{anger, joy, suspense, sad, and neutral}\}. The paper also discusses challenges in the annotation of low resource language such as Hindi and discuss the proposed corpus along with its possible uses.\cite{kumar_bhaav_2019}
 My first try for this project was to source this corpus for training our model, but since we couldn't get permission for the dataset we decided to use the approach presented in the next chapter.
 \clearpage
 \section{Methodology and Implementation}
@@ -291,9 +291,9 @@ This section details the methodology and implementation details of the project. 
 
 \subsection{Dataset}
 
-After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaav_2019}
- , it was decide to find other resources for dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, we found a github repository\cite{sinha_sid573hindi_sentiment_analysis_2021}
- which had the dataset appropriate for sentiment analysis. The dataset here contains various tweets in Hindi along with corresponding label describing the emotional tone of the tweet. The categories of the label are \textit{negative}, \textit{neutral}, \textit{positive}. Figure \ref{dataset} shows some record in the dataset.
+After the initial failure to get access to the BHAAV dataset\cite{kumar_bhaav_2019}
+ , it was decided to find other resources for the dataset. As Hindi is a low resource language this seemed to be a very difficult task at hand. Finally, we found a Github repository\cite{sinha_sid573hindi_sentiment_analysis_2021}
+ which had the dataset appropriate for sentiment analysis. The dataset here contains various tweets in Hindi along with a corresponding label describing the emotional tone of the tweet. The categories of the label are \textit{negative}, \textit{neutral}, \textit{positive}. Figure \ref{dataset} shows some records in the dataset.
  
  \begin{figure}[H]
  \begin{center}
@@ -302,14 +302,14 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
  \end{center}
  \end{figure}
  
- The dataset contains \textit{\textbf{9077}} number of record. This dataset is then further divided into training, test and validation set. The total records in training set are \textit{\textbf{6353}} and the validation and test sets contains \textit{\textbf{1362}} and \textit{\textbf{1362}} records respectively. As, we can see \textit{\textbf{6353}} is comparatively a small number of records required to give a good accuracy on task like Sentiment Analysis. This is where transfer learning comes into play.
+ The dataset contains \textit{\textbf{9077}} number of record. This dataset is then further divided into training, test and validation set. The total records in training set are \textit{\textbf{6353}} and the validation and test sets contains \textit{\textbf{1362}} and \textit{\textbf{1362}} records respectively. As we can see \textit{\textbf{6353}} is comparatively a small number of records required to give a good accuracy on tasks like Sentiment Analysis. This is where transfer learning comes into play.
  
  \subsection{Preprocessing}
  
- There is not a lot of preprocessing done to the dataset. The first thing that is done is to encode the categorical data in label column as the model works on numerical values not text values. Label Encoding technique is used for this purpose. \textbf{Label Encoding} refers to converting the labels into numeric form so as to convert it into the machine-readable form. Machine learning algorithms can then decide in a better way on how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning.\cite{noauthor_ml_2018}
+ There is not a lot of preprocessing done to the dataset. The first thing that is done is to encode the categorical data in the label column as the model works on numerical values, not text values. Label Encoding technique is used for this purpose. \textbf{Label Encoding} refers to converting the labels into the numeric form so as to convert it into the machine-readable form. Machine learning algorithms can then decide in a better way on how those labels must be operated. It is an important pre-processing step for the structured dataset in supervised learning.\cite{noauthor_ml_2018}
  We have three categories in our label data namely \textit{negative}, \textit{neutral}, and \textit{positive}. These will be converted to \textit{0} , \textit{1} and \textit{2} respectively.
  
- Secondly, for input we need to tokenize input as most NLP model are trained on tokens. For this we need to first make all the inputs of number of words . We do this by finding a cutoff number of words. For this we draw a histogram plot of all the inputs based on the total number of words they have and choose number of words that would satisfy most of the inputs. Figure \ref{plot} show the histogram distribution of input based on the total no. of words present in the piece of writing. And as we can see 35, is a good place to put our  cutoff. So that's what we've done. 
+ Secondly, for input, we need to tokenize input as most NLP models are trained on tokens. For this, we need to first make all the inputs have the same number of words . We do this by finding a cutoff number of words. Firstly, we draw a histogram plot of all the inputs based on the total number of words they have and choose the number of words that would satisfy most of the inputs. Figure \ref{plot} shows the histogram distribution of input based on the total no. of words present in the piece of writing. And as we can see 35, is a good place to put our cutoff. So that's what we've done. 
  
  \begin{figure}[H]
  \begin{center}
@@ -317,7 +317,7 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
  \caption{Histogram plot of the inputs based on the number of words\label{plot}}.
  \end{center}
  \end{figure}
- Then we have used to BERTTokenizerFast , a tokenizer pre-trained on multilingual dataset corpus. Tokenizer prepares our input in the following ways.
+ Then we have used a tokenizing tool called BERTTokenizerFast, a tokenizer pre-trained on multilingual dataset corpus. Tokenizer prepares our input in the following ways.
  \begin{itemize}
  \item{Tokenizing (splitting strings in sub-word token strings), converting tokens strings to ids and back, and encoding/decoding (i.e., tokenizing and converting to integers).}\cite{noauthor_tokenizer_nodate}
 
@@ -326,8 +326,8 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
 \item{Managing special tokens (like mask, beginning-of-sentence, etc.): adding them, assigning them to attributes in the tokenizer for easy access and making sure they are not split during tokenization.}\cite{noauthor_tokenizer_nodate}
  \end{itemize}
  
- After the tokenization process is done we've feed these tokens as pytorch\cite{noauthor_pytorch_nodate}
-  tensors to be later transformed into pytorch DataClasses, which will be then used for training and validating in batches of fixed size. We have selected the batch size of 32.
+ After the tokenization process is done we've fed these tokens as pytorch\cite{noauthor_pytorch_nodate}
+  tensors to be later transformed into pytorch DataClasses, which will be then used for training and validating in batches of fixed size. We have selected a batch size of 32.
   
   \subsection{Model}
   
@@ -335,9 +335,9 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
   \begin{itemize}
   \item{First our model has the BERT pre-trained multilingual model. To which the preprocessed input is passed to.}
   
-  \item{Then the output of the BERT model is fed to the first layer of our model which contains 768 input, and 512 output Nodes. We have used the \textbf{Re}ctified \textbf{L}inear \textbf{U}nit activation function also called ReLU function at this layer. It is defined as $R(z) = max(0,z)$. It is usually a good first choice for an activation function based on some empirical evidences.}
+  \item{Then the output of the BERT model is fed to the first layer of our model which contains 768 input, and 512 output Nodes. We have used the \textbf{Re}ctified \textbf{L}inear \textbf{U}nit activation function also called ReLU function at this layer. It is defined as $R(z) = max(0,z)$. It is usually a good first choice for an activation function based on many empirical pieces of evidences.}
   
-  \item{Then we have used a dropout layer to which the output from first layer is passed to. This layer prevents from the problem of over fitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. }\cite{srivastava_dropout_nodate}
+  \item{Then we have used a dropout layer to which the output from the first layer is passed. This layer prevents the problem of overfitting which is a very common issue in training models on complex datasets. The dropout layer helps us fix this issue by ignoring some of the input nodes. }\cite{srivastava_dropout_nodate}
   
   \item{The output from the dropout layer is passed to our output layer. The output layer consists of 512 input nodes (same as the output of first layer) and 3 output nodes. As we have three categories to classify our data, therefore we've used 3 output nodes. The activation function used in this layer is the softmax function. The standard softmax function: $ \sigma : \mathbb{R}^K \rightarrow [0,1]^K $ is defined as \large
   $\sigma(z)_i = \frac{e^{z_i}}{\sum_{j = 1} ^{ K} e^{z_j}}\  for\  i = 1, ... , K\  and\  z = (z1, ..., z_K) \in \mathbb{R}^K$. 
@@ -351,17 +351,17 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
   \normalsize
   
   \subsection{Training and Validation Process}
-  Before training starts, we want to freeze the Bert Layers of our model so that the back propagation doesn't upgrade its weight. This is because we have a relatively small dataset and this can cause overfitting. So to avoid it, we freeze all the Bert Layers of our model. Then we decide on number of epochs we want to train our model for. For this project we have choose a relatively small epoch number which is \textbf{\textit{100}}. Now, our testing and validation process follow the given work flow.
+  Before training starts, we want to freeze the Bert Layers of our model so that the backpropagation doesn't upgrade its weight. This is because we have a relatively small dataset and this can cause overfitting. So to avoid it, we freeze all the Bert Layers of our model. Then we decide on a number of epochs we want to train our model for. For this project we have choose a relatively small epoch number which is \textbf{\textit{100}}. Now, our testing and validation process follow the given workflow.
   \begin{itemize}
   \item We step through the dataset in batches (batch size \textbf{32}).
   \item We send the preprocessed inputs from the batches to our model and get our predictions.
-  \item We calculate the cross entropy loss from predicted and desired output.
+  \item We calculate the cross-entropy loss from predicted and desired output.
   \item Then we update the weights of our Model using back-propagation. 
-  \item Then we perform the validation of our model weights. The process of validation is similar to the process of training but in validation we calculate the average loss for each epoch and doesn't upgrade the weights of the model. Model weights are only upgraded when training.
-  \item We also save the weights of the best Model to a file in validation step. We decide which model is better using average loss that is calculated. We perform this check in every epoch.
+  \item Then we perform the validation of our model weights. The process of validation is similar to the process of training but in validation stage we calculate the average loss for each epoch and doesn't upgrade the weights of the model. Model weights are only upgraded when training.
+  \item We also save the weights of the best Model to a file in validation stage. We decide which model is better using the average loss that is calculated. We perform this check in every epoch.
   \end{itemize}
   
-  This technique ensures that the model that is performing best in validation stage is the only one selected. This helps us removing overfitting even more as the model has no idea about the validation dataset during the training phase. Figure \ref{eval} showcase the basic idea behind training. Our training and validation loss decrease after each epoch(\textbf{this is not completely achievable all the time}.)
+  This technique ensures that the model that is performing best in the validation stage is the only one selected. This helps us removing overfitting even more as the model has no idea about the validation dataset during the training phase. Figure \ref{eval} showcase the basic idea behind training. Our training and validation loss decrease after each epoch(\textbf{this is not completely achievable all the time}.)
   \begin{figure}[H]
   \begin{center}
   \includegraphics[scale=0.65]{eval.png}
@@ -370,9 +370,9 @@ After the initial failure to get the access to the BHAAV dataset\cite{kumar_bhaa
   \end{figure}
   \subsection{Testing Process}
   
-  After the training is complete, the weights of the model with the best validation score (least average loss in validation phase) will be saved in a file. We load these weights to a new instance of our model, then we use this model to generate prediction of our test set.
+  After the training is complete, the weights of the model with the best validation score (least average loss in the validation phase) will be saved in a file. We load these weights to a new instance of our model, then we use this model to generate predictions for our test set.
   
-  The predictions generated from our model is then used along with the labeled data of the test dataset to generate a classification report detailing the performance of our model. The classification report along with its analysis is given in the next chapter
+  The predictions generated from our model is then used along with the labelled data of the test dataset to generate a classification report detailing the performance of our model. The classification report along with its analysis is given in the next chapter
   \clearpage
   \section{Result, Analysis and Conclusion}
   
@@ -416,30 +416,30 @@ Recall is a measure of the classifier's completeness; the ability of a classifie
 The F1 score is a weighted harmonic mean of precision and recall such that the best score is 1.0 and the worst is 0.0. Generally speaking, F1 scores are lower than accuracy measures as they embed precision and recall into their computation. As a rule of thumb, the weighted average of F1 should be used to compare classifier models, not global accuracy.\cite{noauthor_classification_nodate}
 }
 \item{\textbf{support}
-Support is the number of actual occurrences of the class in the specified dataset. Imbalanced support in the training data may indicate structural weaknesses in the reported scores of the classifier and could indicate the need for stratified sampling or re balancing. Support doesn't change between models but instead diagnoses the evaluation process.\cite{noauthor_classification_nodate} }
+Support is the number of actual occurrences of the class in the specified dataset. Imbalanced support in the training data may indicate structural weaknesses in the reported scores of the classifier and could indicate the need for stratified sampling or rebalancing. Support doesn't change between models but instead diagnoses the evaluation process.\cite{noauthor_classification_nodate} }
 \end{itemize}
 The \textbf{macro average} can be described as the average of the metric for all the classes \textit{without} taking the proportion of each class into account. The \textbf{weighted average} is the average of the metric for all the classes \textit{with} taking the proportion of each label into account.
 
 \subsection{Conclusion}
 
-So, with the overall accuracy of \textbf{0.73} or \textbf{73\%} we can say that this is a decently good result for a relatively small dataset. This showcase the promise of transfer learning in the domain of Natural Language Processing for low resource languages like \textbf{Hindi}. Our classification report also shows that we performed very good for \textbf{neutral} cases as compared to the other too. We believe this is due to not given enough time and resource to train, the model doesn't get to learn polarity much adequately but nothing can be said with certainty  at this point. In the next chapter, we highlight some of the future work and improvements that will increase the robustness and performance of our model.
+So, with the overall accuracy of \textbf{0.73} or \textbf{73\%} we can say that this is a decently good result for a relatively small dataset. This showcase the promise of transfer learning in the domain of Natural Language Processing for low resource languages like \textbf{Hindi}. Our classification report also shows that we performed very good for \textbf{neutral} cases as compared to the others. We believe this is due to not being given enough time and resources to train, the model doesn't get to learn polarity much adequately but nothing can be said with certainty  at this point. In the next chapter, we highlight some of the future work and improvements that will increase the robustness and performance of our model.
   \clearpage
   \section{Further work and improvement}
   The model and the process detailed in this dissertation can be improved with more work. 
   \begin{itemize}
-  \item The dataset contains lots of data that is not required for our desired working, like user-names and hash-tags. We can further preprocess the dataset to remove these undesired components. This may increase the performance of our model.
+  \item The dataset contains lots of data that is not required for our desired working, like user names and hash-tags. We can further preprocess the dataset to remove these undesired components. This may increase the performance of our model.
   
-  \item Currently we have tested our model for only one value of max length, we can choose a better max length value through the process of cross validation. Choosing a different max length may increase the overall accuracy of our model.
+  \item Currently we have tested our model for only one value of max length, we can choose a better max length value through the process of cross-validation. Choosing a different max length may increase the overall accuracy of our model.
   
-  \item The topology of our model was restricted by the available VRAM of the machine. We would like to create either a more dense network or add more layers to the first and output layers our model. This may or may-not affect the overall performance of our model but as NLP models generally perform very well with mode dense networks. This change is likely to help.
+  \item The topology of our model was restricted by the available VRAM of the machine. We would like to create either a more dense network or add more layers to the first and output layers of our model. This may or may not affect the overall performance of our model but NLP models generally perform very well with mode dense networks. This change is likely to help.
   
-  \item We could also train the model for more epochs. As 100 epochs may not be sufficient for the task at hand. We chose 100 epochs as it allowed us to train our model in decent time-frame.
+  \item We could also train the model for more epochs. As 100 epochs may not be sufficient for the task at hand. We chose 100 epochs as it allowed us to train our model in a decent time frame.
   
-  \item We could also do a cross analysis of this approach to a different approach of Sentiment Analysis using Transfer Learning.
+  \item We could also do a cross-analysis of this approach to a different approach of Sentiment Analysis using Transfer Learning.
   \end{itemize}   
-  With the addition of aforementioned works we may have a much more robust and precise model at hand. We could also try to replicate this approach on either a bigger corpus and differently classed corpus like that available in BHAAV dataset. \cite{kumar_bhaav_2019}. These are some of the improvements and further works we suggest for our dissertation project.
+  With the addition of the aforementioned works, we may have a much more robust and precise model at hand. We could also try to replicate this approach on either a bigger corpus and a differently classed corpus like that available in BHAAV dataset. \cite{kumar_bhaav_2019}. These are some of the improvements and further works we suggest for our dissertation project.
   
-  Next Chapter contains all the References used in the making of this project.
+The next Chapter contains all the References used in the making of this project.
 
 \clearpage
 \printbibliography[heading=bibintoc]
